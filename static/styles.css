@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 20px; background: #fafafa; }
+fieldset { border: 2px solid #4CAF50; border-radius: 8px; padding: 15px; background: #fff; }
+legend { color: #4CAF50; font-weight: bold; }
+table, th, td { border: 1px solid black; border-collapse: collapse; padding: 6px; }
+button { background: #4CAF50; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; }
+button:hover { background: #45a049; }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Результат — вариант 15</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<h2>Результат: шахматная закраска (клетка {{ cell_percent }}%)</h2>
+
+<table>
+  <tr><th>Исходное изображение</th><th>Новое изображение</th></tr>
+  <tr>
+    <td><img src="data:image/jpeg;base64,{{ orig }}" width="400"></td>
+    <td><img src="data:image/jpeg;base64,{{ res }}" width="400"></td>
+  </tr>
+  <tr><th>График распределения цветов (исходное)</th>
+      <th>График распределения цветов (новое)</th></tr>
+  <tr>
+    <td><img src="data:image/png;base64,{{ dist_orig }}" width="400"></td>
+    <td><img src="data:image/png;base64,{{ dist_res }}" width="400"></td>
+  </tr>
+</table>
+
+<p><a href="/">← Назад к форме</a></p>
+</body>
+</html>

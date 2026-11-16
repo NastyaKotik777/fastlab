@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ЛР3 — Вариант 15 (шахматка)</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+var correctCaptcha = function(response) {
+  document.getElementsByName('resp')[0].value = response;
+  // ВОТ ЭТУ СТРОЧКУ МЫ УБРАЛИ:
+  // document.forms[0].submit();
+};
+</script>
+</head>
+<body>
+<fieldset>
+  <legend>Закраска изображения «шахматкой»</legend>
+  <form method="post" action="/process" enctype="multipart/form-data">
+    <p>
+      Размер клетки, % от размера изображения (1–50):
+      <input type="number" name="cell_percent" min="1" max="50" step="1" value="10" required>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="add_watermark" value="yes">
+        Добавить водяной знак
+      </label>
+    </p>
+    <input type="hidden" name="resp" value="0">
+    <div class="g-recaptcha" data-sitekey="{{ sitekey }}"
+         data-callback="correctCaptcha"></div>
+    <button type="submit">Применить</button>
+  </form>
+</fieldset>
+</body>
+</html>
